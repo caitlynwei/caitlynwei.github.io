@@ -1,0 +1,108 @@
+/* Default Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Lora', serif;
+    line-height: 1;
+    background-color: #F4F7F8;
+    color: #555;
+}
+
+
+
+/* Header Style */
+header {
+    text-align: center;
+    padding: 40px;
+    background-color: #F4F7F8;
+    color: #555;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Container for Content Text */
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columns of Conent Text */
+.column {
+    flex: 1;
+    padding: 10px;
+    background-color: #F4F7F8;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+/* Column Headings */
+.column h2 {
+    margin-bottom: 10px;
+    color: #1D1D1D;
+}
+
+/* List Styling N/A
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+*/
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+/*                  Header/Timer Formatting                    */
+
+/*Timer & Header Text Containter*/
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif;
+    padding: 20px;
+}
+
+/* "I'm a" */
+.text {
+    font-size: 24px;
+    color: #555;
+    margin-right: 10px; /* Space between "I'm a" and the timer */
+}
+
+/* Timer, Stationary (hopefully)*/
+.timer {
+    font-size: 24px;
+    color: #555;
+    width: 150px; /* Fixed width to prevent shifting */
+    text-align: left;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Ensure overflow is handled */
+}
+
+/* "year-old........" */
+.year-old {
+    font-size: 24px;
+    color: #555;
+    margin-left: 6px; /* Space between the timer and the long text */
+    white-space: nowrap; /* Prevent wrapping if needed */
+}
