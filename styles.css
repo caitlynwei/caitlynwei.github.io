@@ -8,6 +8,8 @@
 /* Body Style */
 body {
     font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
     line-height: 1;
     background-color: #F4F7F8;
     color: #555;
