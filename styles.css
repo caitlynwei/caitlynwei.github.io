@@ -47,11 +47,34 @@ h1 {
     border-radius: 8px;
 }
 
+.ascii-art {
+        font-size: 1.5vw; /* Adjust the font size based on the viewport width */
+        white-space: pre; /* Preserve whitespace formatting */
+    }
+
 /* Column Headings */
 .column h2 {
     margin-bottom: 10px;
     color: #1D1D1D;
+    padding-bottom: 10px;
 }
+
+.column h1 {
+        margin-bottom: 10px;
+        /*padding-bottom: 10px;*/
+}
+
+.column p {
+        margin-bottom: 8px;
+        /*padding-bottom: 10px;*/
+}
+
+.row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
 /* List Styling N/A
 ul {
@@ -86,15 +109,12 @@ ul li {
 
 /* "I'm a" */
 .text {
-    font-size: 24px;
-    color: #555;
-    margin-right: 10px; /* Space between "I'm a" and the timer */
+
+    margin-right: 10px;  /*Space between "I'm a" and the timer */
 }
 
 /* Timer, Stationary (hopefully)*/
 .timer {
-    font-size: 24px;
-    color: #555;
     width: 150px; /* Fixed width to prevent shifting */
     text-align: left;
     white-space: nowrap; /* Prevent text wrapping */
@@ -103,8 +123,6 @@ ul li {
 
 /* "year-old........" */
 .year-old {
-    font-size: 24px;
-    color: #555;
     margin-left: 6px; /* Space between the timer and the long text */
-    white-space: nowrap; /* Prevent wrapping if needed */
+    /*white-space: nowrap;  Prevent wrapping if needed */
 }
