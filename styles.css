@@ -1,128 +1,178 @@
 /* Default Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Style */
-body {
-    font-family: 'Lora', serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    background-color: #F4F7F8;
-    color: #555;
-}
-
-
-
-/* Header Style */
-header {
-    text-align: center;
-    padding: 40px;
-    background-color: #F4F7F8;
-    color: #555;
-}
-
-h1 {
-    margin: 0;
-}
-
-/* Container for Content Text */
-.container1 {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Columns of Conent Text */
-.column {
-    flex: 1;
-    padding: 10px;
-    background-color: #F4F7F8;
-    margin: 0 10px;
-    border-radius: 8px;
-}
-
-.ascii-art {
-        font-size: 1.5vw; /* Adjust the font size based on the viewport width */
-        white-space: pre; /* Preserve whitespace formatting */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-
-/* Column Headings */
-.column h2 {
-    margin-bottom: 10px;
-    color: #1D1D1D;
-    padding-bottom: 10px;
-}
-
-.column h1 {
-        margin-bottom: 10px;
-        /*padding-bottom: 10px;*/
-}
-
-.column p {
-        margin-bottom: 8px;
-        /*padding-bottom: 10px;*/
-}
-
-.row {
-        display: flex;
-        flex-direction: row;
+    
+    /* Body Style */
+    body {
+        font-family: 'Lora', serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.4;
+        background-color: #F4F7F8;
+        color: #555;
+    }
+    
+    /* Header Style */
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #F4F7F8;
+        color: #555;
         width: 100%;
-        margin-bottom: 20px;
+        overflow-x: hidden;
     }
-
-/* List Styling N/A
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    margin: 10px 0;
-}
-*/
-
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
+    
+    h1 {
+        margin: 0;
     }
+    
+    /* ASCII Art Styling */
+    .ascii-art {
+        font-size: 12px;
+        white-space: pre;
+        overflow-x: auto;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Container for Content Text */
+    .container1 {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    /* Row styling */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* Columns of Content Text */
     .column {
-        margin-bottom: 20px;
+        flex: 1;
+        min-width: 200px;
+        padding: 15px;
+        background-color: #F4F7F8;
+        border-radius: 8px;
+        /*box-shadow: 0 1px 3px rgba(0,0,0,0.1);*/
     }
-}
+    
+    /* Column Headings */
+    .column h1 {
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        color: #555;
+    }
+    
+    .column p {
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+    
+    /*                  Header/Timer Formatting                    */
+    
+    /* Timer & Header Text Container */
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        width: 100%;
+    }
+    
+    .text-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    /* Text styling */
+    .text {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+    
+    /* "I'm a" */
+    .intro-text {
+        margin-right: 5px;
+    }
+    
+    /* Timer, Stationary */
+    .timer {
+        min-width: 60px;
+        display: inline-block;
+        text-align: left;
+        width: 97px; /* Adjust based on your maximum expected width */
+    }
+    
+    /* "year-old........" */
+    .year-old {
+        margin-left: 5px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .row {
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .ascii-art {
+            font-size: 10px;
+        }
+        
+        header {
+            padding: 15px 10px;
+        }
+        
+        .column h1 {
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .column {
+            flex-basis: 100%;
+        }
+        
+        .ascii-art {
+            font-size: 8px;
+        }
+        
+        header {
+            padding: 10px 5px;
+        }
+        
+        .text-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .intro-text, .timer, .year-old {
+            margin: 2px 0;
+        }
 
-/*                  Header/Timer Formatting                    */
-
-/*Timer & Header Text Containter*/
-.container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Lora', serif;
-    padding: 20px;
-}
-
-/* "I'm a" */
-.text {
-
-    margin-right: 10px;  /*Space between "I'm a" and the timer */
-}
-
-/* Timer, Stationary (hopefully)*/
-.timer {
-    width: 150px; /* Fixed width to prevent shifting */
-    text-align: left;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Ensure overflow is handled */
-}
-
-/* "year-old........" */
-.year-old {
-    margin-left: 6px; /* Space between the timer and the long text */
-    /*white-space: nowrap;  Prevent wrapping if needed */
-}
+        .timer {
+                margin: 5px 0;
+                width: auto;
+                min-width: 80px;
+        }
+    }
